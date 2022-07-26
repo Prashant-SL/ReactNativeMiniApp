@@ -1,14 +1,16 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View, Button } from 'react-native';
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.mainTop}>
-                <Image style={styles.topImage} source={{ uri: "https://via.placeholder.com/200x300" }} />
+                <Image resizeMode='cover' style={styles.topImage} source={require("../../assets/homebanner.jpeg/")} />
                 <Text style={{ fontSize: 26, textAlign: "center", marginTop: 20 }}>Welcome to</Text>
-                <Text style={{ fontSize: 26, textAlign: "center", marginTop: 5, color: "#2222AB", fontWeight: "600" }}>Prashant's Mini App</Text>
+                <Text style={{ fontSize: 22, textAlign: "center", marginTop: 5, color: "#344555", fontWeight: "600", textTransform: "uppercase" }}>Prashant's Mini App</Text>
             </View>
+            <Text style={styles.paraStyle}>Lorem Ipsum Random dummy content text to be written in the paragraph section. Lorem Ipsum Random dummy content text.</Text>
+            <Button style={styles.btn} title='Go Back' onPress={() => navigation.navigate("Services")} />
         </View>
     )
 }
@@ -32,10 +34,21 @@ const styles = StyleSheet.create({
     },
     topImage: {
         borderWidth: 2,
-        width: "100%",
-        height: undefined,
-        marginHorizontal: 40,
+        // width: "90%",
+        height: 300,
+        // marginHorizontal: 40,
         marginTop: 100,
-        aspectRatio: 1
+        aspectRatio: 2 / 1.7,
+        borderRadius: 20
+    },
+    paraStyle: {
+        paddingHorizontal: 20,
+        paddingTop: 10,
+        lineHeight: 20,
+    },
+    btn: {
+        color: "red",
+        borderRadius: 20,
+        width: 100
     }
 })
