@@ -10,6 +10,6 @@ const Services = ({ navigation }) => {
     )
 }
 
-export default Services
+const styles = StyleSheet.create({});
 
-const styles = StyleSheet.create({})
+export default Services;

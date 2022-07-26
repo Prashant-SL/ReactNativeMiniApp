@@ -1,7 +1,8 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, Button } from 'react-native';
+import { Image, StyleSheet, Text, View, Button, FlatList, TouchableOpacity } from 'react-native';
 
 const Home = ({ navigation }) => {
+    let arr = [{ name: "A", key: 1 }, { name: "B", key: 2 }, { name: "C", key: 3 }, { name: "D", key: 4 }, { name: "E", key: 5 }, { name: "F", key: 6 }];
     return (
         <View style={styles.mainContainer}>
             <View style={styles.mainTop}>
@@ -10,7 +11,19 @@ const Home = ({ navigation }) => {
                 <Text style={{ fontSize: 22, textAlign: "center", marginTop: 5, color: "#344555", fontWeight: "600", textTransform: "uppercase" }}>Prashant's Mini App</Text>
             </View>
             <Text style={styles.paraStyle}>Lorem Ipsum Random dummy content text to be written in the paragraph section. Lorem Ipsum Random dummy content text.</Text>
-            <Button style={styles.btn} title='Go Back' onPress={() => navigation.navigate("Services")} />
+            <Button title='Go Back' onPress={() => navigation.navigate("Services")} />
+            <FlatList data={arr} renderItem={(e) => {
+                return (
+                    <TouchableOpacity style={styles.smallBox}>
+                        <Text>{e.item.name} Prashant S Laxmeshwarmath</Text>
+                        <Text>{e.item.name} Prashant S Laxmeshwarmath</Text>
+                        <Text>{e.item.name} Prashant S Laxmeshwarmath</Text>
+                        <Text>{e.item.name} Prashant S Laxmeshwarmath</Text>
+                        <Text>{e.item.name} Prashant S Laxmeshwarmath</Text>
+                        <Text>{e.item.name} Prashant S Laxmeshwarmath</Text>
+                    </TouchableOpacity>
+                )
+            }} />
         </View>
     )
 }
@@ -20,9 +33,9 @@ export default Home
 const styles = StyleSheet.create({
     mainContainer: {
         borderWidth: 2,
-        width: "100%",
-        display: "flex",
-        justifyContent: "space-between",
+        height: undefined,
+        // display: "flex",
+        // justifyContent: "space-between",
         paddingHorizontal: 5,
         textAlign: "center"
     },
@@ -34,10 +47,8 @@ const styles = StyleSheet.create({
     },
     topImage: {
         borderWidth: 2,
-        // width: "90%",
         height: 300,
-        // marginHorizontal: 40,
-        marginTop: 100,
+        marginTop: 10,
         aspectRatio: 2 / 1.7,
         borderRadius: 20
     },
@@ -46,9 +57,9 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         lineHeight: 20,
     },
-    btn: {
-        color: "red",
-        borderRadius: 20,
-        width: 100
+    smallBox: {
+        width: "40%",
+        // height: "25%",
+        borderWidth: 2
     }
 })
