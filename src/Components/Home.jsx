@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     mainContainer: {
         borderWidth: .2,
         paddingHorizontal: 5,
-        textAlign: "center"
+        textAlign: "center",
+        marginTop: 100
     }, mainTop: {
         display: "flex",
         justifyContent: "center",

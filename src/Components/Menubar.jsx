@@ -34,12 +34,16 @@ const styles = StyleSheet.create({
     menuContainer: {
         flexDirection: "row",
         justifyContent: "space-around",
-        marginVertical: 50
+        marginVertical: 50,
+        borderWidth: .5,
+        paddingVertical: 25
     },
     text: {
         borderWidth: .4,
-        padding: 6,
-        borderRadius: 16
+        padding: 8,
+        borderRadius: 2,
+        color: "white",
+        backgroundColor: "#11AA22"
     }
 })
 
