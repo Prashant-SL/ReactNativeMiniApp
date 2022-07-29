@@ -2,15 +2,14 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-const Menubar = () => {
+const Menubar = ({ text }) => {
     const navigation = useNavigation();
-
     return (
         <View style={styles.menuContainer}>
             <TouchableOpacity onPress={() => {
                 navigation.navigate("Home");
             }}>
-                <Text style={styles.text}>Home</Text>
+                <Text style={styles.text}>{text}</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {
                 navigation.navigate("Courses");
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
     text: {
         borderWidth: .4,
         padding: 8,
-        borderRadius: 2,
+        borderRadius: 9,
         color: "white",
         backgroundColor: "#11AA22"
     }

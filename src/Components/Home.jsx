@@ -3,7 +3,6 @@ import { Image, StyleSheet, Text, View, Button, FlatList, TouchableOpacity, Scro
 import Menubar from './Menubar';
 
 const Home = ({ navigation }) => {
-    let arr = [{ name: "A", key: 1 }, { name: "B", key: 2 }, { name: "C", key: 3 }, { name: "D", key: 4 }, { name: "E", key: 5 }, { name: "F", key: 6 }];
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.mainContainer}>
@@ -13,7 +12,7 @@ const Home = ({ navigation }) => {
                     <Text style={{ fontSize: 22, textAlign: "center", marginTop: 5, color: "#1119EE", fontWeight: "600", textTransform: "uppercase" }}>Prashant's Mini App</Text>
                 </View>
                 <Text style={styles.paraStyle}>Lorem Ipsum Random dummy content text to be written in the paragraph section. Lorem Ipsum Random dummy content text.</Text>
-                <Menubar />
+                <Menubar text="Home" />
             </View>
         </ScrollView>
     )

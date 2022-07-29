@@ -5,12 +5,11 @@ import APIData from './APIData';
 const Courses = () => {
     return (
         <View style={{ backgroundColor: "#FFF" }}>
-            <Text style={styles.heading}>Courses We Teach!!!</Text>
-            <FlatList data={APIData[0]} renderItem={({ item }) => {
+            <FlatList keyExtractor={key => key.id} data={APIData[0]} renderItem={({ item }) => {
                 return (
                     <View style={styles.mainContainer}>
                         <Text style={styles.title}>{item.title}</Text>
-                        <Image style={styles.img} source={{ uri: item.image }} />
+                        <Image resizeMode='contain' style={styles.img} source={{ uri: item.image }} />
                         <Text style={styles.para}>{item.description}</Text>
 
                         <TouchableOpacity onPress={() => Alert.alert("Success", `You have successfully joined the ${item.title} course`)}>
@@ -59,15 +58,6 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         fontSize: 24
     },
-    heading: {
-        textAlign: "center",
-        padding: 10,
-        fontWeight: "400",
-        color: "#12C",
-        fontSize: 24,
-        fontWeight: "400",
-        textTransform: "uppercase"
-    }
 });
 
 export default Courses;

@@ -1,4 +1,5 @@
 export default Course = [
+    // Courses Data
     [{
         id: "1",
         image: "https://www.onlinecoursereport.com/wp-content/uploads/2020/07/shutterstock_394793860-1024x784.jpg",
@@ -35,12 +36,34 @@ export default Course = [
         image: "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/04/19/1506964-april-teamology-article-16-dna.png",
         title: "Social Media Marketing",
         description: "We are professional social media marketing agency consisting of world class social media marketers across the world. We have delivered best contents to the client's"
-    }], [
+    }],
+    // Users Data
+    [
         {
             id: "1",
-            image: "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/04/19/1506964-april-teamology-article-16-dna.png",
+            image: "https://avatars.githubusercontent.com/u/95927107?v=4",
+            name: "Prashant S Laxmeshwarmath",
+            role: "Web Developer"
+        }, {
+            id: "2",
+            image: "https://avatars.githubusercontent.com/u/95927107?v=4",
+            name: "Prashant S Laxmeshwarmath",
+            role: "Web Developer"
+        }, {
+            id: "3",
+            image: "https://avatars.githubusercontent.com/u/95927107?v=4",
+            name: "Prashant S Laxmeshwarmath",
+            role: "Web Developer"
+        }, {
+            id: "4",
+            image: "https://avatars.githubusercontent.com/u/95927107?v=4",
+            name: "Prashant S Laxmeshwarmath",
+            role: "Web Developer"
+        }, {
+            id: "5",
+            image: "https://avatars.githubusercontent.com/u/95927107?v=4",
             name: "Prashant S Laxmeshwarmath",
             role: "Web Developer"
         }
     ]
-]
+];

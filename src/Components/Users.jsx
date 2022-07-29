@@ -5,11 +5,10 @@ import APIData from './APIData';
 const Users = () => {
     return (
         <View style={{ backgroundColor: "#FFF" }}>
-            <Text style={styles.heading}>Users</Text>
-            <FlatList data={APIData[1]} renderItem={({ item }) => {
+            <FlatList keyExtractor={key => key.id} data={APIData[1]} renderItem={({ item }) => {
                 return (
                     <View style={styles.mainContainer}>
-                        <Image style={styles.img} source={{ uri: item.image }} />
+                        <Image resizeMode='contain' style={styles.img} source={{ uri: item.image }} />
                         <Text style={styles.title}>{item.name}</Text>
                         <Text style={styles.para}>{item.role}</Text>
                     </View>
@@ -36,6 +35,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         fontSize: 15,
         lineHeight: 20,
+        textAlign: "center",
+        paddingVertical: 10
     },
     btn: {
         backgroundColor: "#3b7",
@@ -55,15 +56,6 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         fontSize: 24
     },
-    heading: {
-        textAlign: "center",
-        padding: 10,
-        fontWeight: "400",
-        color: "#12C",
-        fontSize: 24,
-        fontWeight: "400",
-        textTransform: "uppercase"
-    }
 });
 
 export default Users;
