@@ -6,7 +6,7 @@ const Courses = () => {
     return (
         <View style={{ backgroundColor: "#FFF" }}>
             <Text style={styles.heading}>Courses We Teach!!!</Text>
-            <FlatList data={APIData} renderItem={({ item }) => {
+            <FlatList data={APIData[0]} renderItem={({ item }) => {
                 return (
                     <View style={styles.mainContainer}>
                         <Text style={styles.title}>{item.title}</Text>
@@ -25,11 +25,11 @@ const Courses = () => {
 
 const styles = StyleSheet.create({
     mainContainer: {
-        backgroundColor: "#EEEEEE",
+        backgroundColor: "#EEE",
         padding: 10,
         margin: 10,
-        borderWidth: 2,
-        borderRadius: 20
+        borderWidth: .2,
+        borderRadius: 10,
     },
     img: {
         width: "100%",
@@ -61,8 +61,12 @@ const styles = StyleSheet.create({
     },
     heading: {
         textAlign: "center",
-        paddingVertical: 15,
-        fontWeight: "400"
+        padding: 10,
+        fontWeight: "400",
+        color: "#12C",
+        fontSize: 24,
+        fontWeight: "400",
+        textTransform: "uppercase"
     }
 });
 

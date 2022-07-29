@@ -23,7 +23,6 @@ export default Home
 
 const styles = StyleSheet.create({
     mainContainer: {
-        borderWidth: .2,
         paddingHorizontal: 5,
         textAlign: "center",
         marginTop: 40
