@@ -13,9 +13,9 @@ const Menubar = () => {
                 <Text style={styles.text}>Home</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {
-                navigation.navigate("Services");
+                navigation.navigate("Courses");
             }}>
-                <Text style={styles.text}>Services</Text>
+                <Text style={styles.text}>Courses</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {
                 navigation.navigate("Users");

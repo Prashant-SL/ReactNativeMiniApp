@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         borderWidth: .2,
         paddingHorizontal: 5,
         textAlign: "center",
-        marginTop: 100
+        marginTop: 40
     }, mainTop: {
         display: "flex",
         justifyContent: "center",
