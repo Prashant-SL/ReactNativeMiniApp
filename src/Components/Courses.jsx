@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View, FlatList, TouchableOpacity, Image } from 'react-native';
+import { Button, StyleSheet, Text, View, FlatList, TouchableOpacity, Image, Alert } from 'react-native';
 import APIData from './APIData';
 
-const Courses = ({ navigation }) => {
+const Courses = () => {
     return (
         <View style={{ backgroundColor: "#FFF" }}>
-            <Text>Courses We Teach!!!</Text>
+            <Text style={styles.heading}>Courses We Teach!!!</Text>
             <FlatList data={APIData} renderItem={({ item }) => {
                 return (
                     <View style={styles.mainContainer}>
-                        <Text>{item.title}</Text>
+                        <Text style={styles.title}>{item.title}</Text>
                         <Image style={styles.img} source={{ uri: item.image }} />
                         <Text style={styles.para}>{item.description}</Text>
 
-                        <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <TouchableOpacity onPress={() => Alert.alert("Success", `You have successfully joined the ${item.title} course`)}>
                             <Text style={styles.btn}>Join Course</Text>
                         </TouchableOpacity>
                     </View>
@@ -27,10 +27,14 @@ const styles = StyleSheet.create({
     mainContainer: {
         backgroundColor: "#EEEEEE",
         padding: 10,
-        margin: 10
+        margin: 10,
+        borderWidth: 2,
+        borderRadius: 20
     },
     img: {
-        width: "100%", height: 250, marginVertical: 25,
+        width: "100%",
+        height: 250,
+        marginVertical: 25,
     },
     para: {
         paddingHorizontal: 10,
@@ -38,8 +42,8 @@ const styles = StyleSheet.create({
         lineHeight: 20,
     },
     btn: {
-        backgroundColor: "#3b0",
-        padding: 10,
+        backgroundColor: "#3b7",
+        padding: 15,
         width: 130,
         borderRadius: 8,
         color: "white",
@@ -47,6 +51,18 @@ const styles = StyleSheet.create({
         marginVertical: 15,
         textAlign: "center",
         fontWeight: "bold"
+    },
+    title: {
+        textAlign: "center",
+        paddingTop: 20,
+        color: "#590",
+        fontWeight: "600",
+        fontSize: 24
+    },
+    heading: {
+        textAlign: "center",
+        paddingVertical: 15,
+        fontWeight: "400"
     }
 });
 
