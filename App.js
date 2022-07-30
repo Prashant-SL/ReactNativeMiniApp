@@ -11,9 +11,9 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home' >
-        <Stack.Screen name='Home' component={Home} options={{ title: 'Dashboard', headerTitleAlign: "center", headerTitleStyle: { fontSize: 20 }, headerBackButtonMenuEnabled: false }} />
+        <Stack.Screen name='Home' component={Home} options={{ headerShown: false, headerTitleAlign: "center", headerTitleStyle: { fontSize: 20 }, headerBackButtonMenuEnabled: false }} />
         <Stack.Screen name='Courses' component={Courses} options={{ title: 'Courses', headerTitleAlign: "center" }} />
-        <Stack.Screen name='Users' component={Users} options={{ title: 'Users', headerTitleAlign: "center" }} />
+        <Stack.Screen name='Users' component={Users} options={{ title: 'Users', headerTitleAlign: "center", }} />
         <Stack.Screen name='Contact' component={Contact} options={{ title: 'Contact', headerTitleAlign: "center" }} />
       </Stack.Navigator>
     </NavigationContainer>

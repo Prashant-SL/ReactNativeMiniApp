@@ -23,7 +23,6 @@ const Contact = ({ navigation }) => {
     return (
         <View>
             <View style={styles.formContainer}>
-
                 <Text style={styles.label}>Enter Your Name</Text>
                 <TouchableOpacity>
                     <TextInput name="name" style={styles.inpt} onChangeText={(e) => setName(e)} />
